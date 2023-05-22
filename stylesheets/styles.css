@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap");
+.background {
+  background-color: #15191D;
+}
+.background h1 {
+  color: #F6F3F2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+}
+.background .container {
+  box-sizing: border-box;
+}
+.background .container .lower .navigation {
+  display: flex;
+  gap: 4px;
+}
+.background .container .sound-port, .background .container .jumbo-button {
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  height: 240px;
+}
+.background .container #soundController {
+  transform: rotate(-60deg);
+}
+.background .container .dial {
+  height: 116px;
+  margin: 0px 4px 4px 4px;
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+.background .container .timer {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+.background .container .spin-left {
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  height: 120px;
+  margin: 0px 0px 0px 4px;
+  padding: 0px 20px 0px 0px;
+}
+.background .container .spin-right {
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  height: 120px;
+  margin: 0px 4px 0px 0px;
+  padding: 0px 0px 0px 20px;
+}
+.background .container .spin-middle {
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  height: 120px;
+  margin: 0px 4px 0px 4px;
+  padding: 0px 0px 0px 0px;
+}
+.background .container .left-button, .background .container .middle-button, .background .container .right-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #15191D;
+  border: 2px solid #FFFFFF;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+}
+.background .container .left-button:hover, .background .container .middle-button:hover, .background .container .right-button:hover {
+  background-color: #B2A8A5;
+  box-shadow: inset 4px 4px 6px 4px rgba(255, 255, 255, 0.4), 4px 4px 8px 2px rgba(178, 168, 165, 0.7);
+  transition: all 0.5s;
+}
+.background .container .left-button:active, .background .container .middle-button:active, .background .container .right-button:active {
+  background-color: #82736f;
+}
+.background .container .keyboard-padding {
+  background-color: #F6F3F2;
+  min-width: 120px;
+  height: 240px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.background .container .keyboards {
+  margin: 4px 0px 0px 2px;
+}
+.background .container .keyboard {
+  background-color: #F6F3F2;
+  color: #F6F3F2;
+  min-width: 80px;
+  min-height: 200px;
+  border-radius: 100px;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+.background .container .nav-button-padding {
+  background-color: #F6F3F2;
+  border-radius: 10px;
+  height: 118px;
+}
+.background .container .stop-recording {
+  background-color: #F6F3F2;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 20px;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+}
+.background .container .stop-recording .circle {
+  background-color: #F24B00;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.background .container .stop-recording:hover .circle {
+  background-color: #B2A8A5;
+}
+.background .container .stop-recording:active {
+  box-shadow: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5), inset -4px -4px 4px 0px rgb(255, 255, 255);
+}
+.background .container .stop-recording:active .circle {
+  background-color: #F24B00;
+}
+.background .container .pause-recording {
+  background-color: #F6F3F2;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 20px;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+}
+.background .container .pause-recording .rectangle {
+  background-color: #15191D;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+.background .container .pause-recording:hover .rectangle {
+  background-color: #B2A8A5;
+}
+.background .container .pause-recording:active {
+  box-shadow: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5), inset -4px -4px 4px 0px rgb(255, 255, 255);
+}
+.background .container .pause-recording:active .rectangle {
+  background-color: #15191D;
+}
+.background .container .reset-recording {
+  background-color: #F6F3F2;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 20px;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+  font-family: "Poppins", sans-serif;
+}
+.background .container .reset-recording:hover {
+  color: #B2A8A5;
+}
+.background .container .reset-recording:active {
+  color: #15191D;
+  box-shadow: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5), inset -4px -4px 4px 0px rgb(255, 255, 255);
+}
+.background .container .start-recording {
+  background-color: #F6F3F2;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 20px;
+  box-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5), -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+}
+.background .container .start-recording .triangle-hover {
+  display: none;
+  visibility: hidden;
+}
+.background .container .start-recording:hover .triangle {
+  display: none;
+  visibility: hidden;
+}
+.background .container .start-recording:hover .triangle-hover {
+  display: block;
+  visibility: visible;
+}
+.background .container .start-recording-pressed {
+  box-shadow: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5), inset -4px -4px 4px 0px rgb(255, 255, 255);
+}
+.background .container .start-recording-pressed:hover .triangle-hover {
+  display: none;
+  visibility: hidden;
+}
+.background .container .start-recording-pressed:hover .triangle {
+  display: block;
+  visibility: visible;
+}
+
+footer {
+  background-color: #15191D;
+  color: #F6F3F2;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.pressed {
+  background-color: #F6F3F2;
+  color: #F6F3F2;
+  min-width: 80px;
+  min-height: 200px;
+  border-radius: 100px;
+  box-shadow: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5), inset -4px -4px 4px 0px rgb(255, 255, 255);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.rotate-animation {
+  animation: rotate 1s linear infinite;
+}
+
+.left-resume, .right-resume {
+  width: 5px;
+  height: 20px;
+  background-color: #15191D;
+  border-radius: 2px;
+}
+
+.resume:hover .left-resume, .resume:hover .right-resume {
+  background-color: #B2A8A5;
+}
+.resume:hover:active {
+  background-color: #15191D;
+}
+
+@media (max-width: 992px) {
+  .container .sound-port {
+    margin-bottom: 4px;
+  }
+  .container .jumbo-button {
+    margin-top: 4px;
+  }
+  .container .keyboard-padding {
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 992px) and (max-width: 576px) {
+  .container .keyboard-padding {
+    margin: 4px 0px 0px 0px;
+  }
+  .container .r-w, .container .r-a, .container .r-s {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .timer {
+    visibility: hidden;
+    display: none;
+  }
+  .r-x {
+    margin-top: 4px;
+  }
+  .lower .navigation {
+    flex-direction: column;
+    gap: 0px !important;
+  }
+}/*# sourceMappingURL=styles.css.map */

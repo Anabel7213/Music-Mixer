@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap'); //------ custom font --------- //
+
+//VARIABLES & MIXINS
+$night-black: #15191D;
+$milky-white: #F6F3F2;
+$accent: #F24B00;
+$light-beige: #B2A8A5;
+$keyboard-shadow: 4px 4px 8px 2px rgba(178, 168, 165, 0.5),
+    -4px -4px 2px 4px rgba(255, 255, 255, 0.25);
+$jumbo-button-shadow: 20px 20px 6px 2px rgba(178, 168, 165, 0.6),
+    -4px -4px 2px 4px rgba(255, 255, 255, 0.3),
+    4px 4px 4px -2px rgba(60, 68, 74, 0.2),
+    -10px -10px 0px 0px rgba(246, 243, 242, 1),
+    0px 0px 0px 30px rgba(255, 255, 255, 0.25);
+$keyboard-pressed: inset 4px 4px 4px 0px rgba(178, 168, 165, 0.5),
+                   inset -4px -4px 4px 0px rgba(255, 255, 255, 1); //creating inner shadow with inset
+
+@mixin recording-button {
+        background-color:$milky-white;
+        width:80px;
+        height:80px;
+        cursor: pointer;
+        border-radius:100px;
+        margin:20px;
+        box-shadow:$keyboard-shadow;
+}
+@mixin round-button {
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        cursor:pointer;
+        background-color: $night-black;
+        border:2px solid #FFFFFF;
+        box-shadow: $keyboard-shadow;
+}
+@mixin spin-button($margin, $padding) {
+    background-color: $milky-white;
+    border-radius:10px;
+    height:120px;
+    margin: $margin;
+    padding: $padding;
+}
+//END VARIABLES & MIXINS ------------------------------------------
+
+.background {
+    background-color: $night-black;
+h1 {
+    color:$milky-white;
+    font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    font-size:6rem;
+}
+.container {
+    box-sizing:border-box;
+.lower .navigation {
+    display:flex;
+    gap:4px;
+}
+
+//UPPER ROW --------- //
+    .sound-port, .jumbo-button {
+        background-color: $milky-white;
+        border-radius:10px;
+        height:240px;
+    }
+    #soundController {
+        transform:rotate(-60deg);
+    }
+    .dial {
+        height:116px;
+        margin:0px 4px 4px 4px;
+        background-color: $milky-white;
+        border-radius:10px;
+        font-family: 'Poppins', sans-serif;
+        font-size:1.5rem;
+    }
+    .timer {
+        font-family: 'Poppins', sans-serif;
+        font-size:1.5rem;
+    }
+    .spin-left {
+        @include spin-button(0px 0px 0px 4px, 0px 20px 0px 0px);
+    } 
+    .spin-right {
+        @include spin-button(0px 4px 0px 0px, 0px 0px 0px 20px);
+    }
+    .spin-middle {
+        @include spin-button(0px 4px 0px 4px, 0px 0px 0px 0px);
+    }
+    .left-button, .middle-button, .right-button {
+        @include round-button;
+        &:hover {
+            background-color:$light-beige;
+            box-shadow: inset 4px 4px 6px 4px rgba(255, 255, 255, 0.4), 4px 4px 8px 2px rgba(178, 168, 165, 0.7);
+            transition:all .5s;
+        }
+        &:active {
+            background-color:darken($light-beige,20%);
+        }
+    }
+
+//KEYBOARDS ------- //
+    .keyboard-padding {
+        background-color:$milky-white;
+        min-width:120px;
+        height:240px;
+        border-radius:10px;
+        padding:20px;
+    }
+    .keyboards {
+        margin:4px 0px 0px 2px;
+    }
+    .keyboard {
+        background-color:$milky-white;
+        color:$milky-white;
+        min-width:80px;
+        min-height:200px;
+        border-radius:100px;
+        box-shadow:$keyboard-shadow;
+        cursor: pointer;
+    }
+
+//NAVIGATION BUTTONS ------- //
+    .nav-button-padding {
+        background-color: $milky-white;
+        border-radius:10px;
+        height:118px;
+    }
+    .stop-recording {
+        @include recording-button;
+        .circle {
+            background-color:$accent;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+        }
+        &:hover {
+            .circle {
+                background-color:$light-beige;
+            }
+        }
+        &:active {
+            box-shadow:$keyboard-pressed;
+            .circle {
+                background-color:$accent;
+            }
+        }
+    }
+    .pause-recording {
+        @include recording-button;
+        .rectangle {
+            background-color: $night-black;
+            width:20px;
+            height:20px;
+            border-radius:2px;
+        }
+        &:hover {
+            .rectangle {
+                background-color:$light-beige;
+            }
+        }
+        &:active {
+            box-shadow:$keyboard-pressed;
+            .rectangle {
+                background-color: $night-black;
+            }
+        }
+    }
+    .reset-recording {
+        @include recording-button;
+        font-family: 'Poppins', sans-serif;
+        &:hover {
+            color:$light-beige;
+        }
+        &:active {
+            color:$night-black;
+            box-shadow:$keyboard-pressed;
+        }
+    }
+    .start-recording {
+        @include recording-button;
+        .triangle-hover {
+            display:none;
+            visibility: hidden;
+        }
+        &:hover {
+            .triangle {
+                display:none;
+                visibility: hidden;
+            }
+            .triangle-hover {
+                display:block;
+                visibility: visible;
+            }
+        }
+    }
+    .start-recording-pressed {
+        box-shadow: $keyboard-pressed;
+        &:hover {
+            .triangle-hover {
+                display:none;
+                visibility: hidden;
+            }
+            .triangle {
+                display:block;
+                visibility: visible;
+            }
+        }
+      }
+}
+}
+footer {
+    background-color:$night-black;
+    color:$milky-white;
+    font-family: 'Poppins', sans-serif;
+    font-size:1rem;
+}
+
+//EFFECTS --------- //
+.pressed {
+    background-color:$milky-white;
+    color:$milky-white;
+    min-width:80px;
+    min-height:200px;
+    border-radius:100px;
+    box-shadow:$keyboard-pressed;
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .rotate-animation {
+    animation: rotate 1s linear infinite;
+  }
+
+  .left-resume, .right-resume {
+    width:5px;
+    height:20px;
+    background-color: $night-black;
+    border-radius:2px;
+  }
+  .resume:hover {
+    .left-resume, .right-resume {
+            background-color: $light-beige;
+    }
+    &:active {
+        background-color: $night-black;
+    }
+  }
+
+//RESPONSIVE DESIGN ---------- //
+@media (max-width:992px) {
+    .container {
+        .sound-port {
+            margin-bottom:4px;
+        }
+        .jumbo-button {
+            margin-top:4px;
+        }
+        .keyboard-padding {
+            margin-bottom:4px;
+        }
+        @media (max-width:576px) {
+            .keyboard-padding {
+                margin:4px 0px 0px 0px;
+            }
+            .r-w,.r-a, .r-s {
+                margin-top:0px;
+            }
+        }
+    }
+}
+@media (min-width:992px) and (max-width:1200px) {
+    .timer {
+        visibility:hidden;
+        display:none;
+    }
+    .r-x {
+        margin-top:4px;
+    }
+    .lower .navigation {
+        flex-direction: column;
+        gap:0px !important;
+    }
+}
