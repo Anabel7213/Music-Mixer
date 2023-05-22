@@ -10,4 +10,7 @@ DJ Mixer was first designed in Figma where I created variable components and def
 
 This project is JavaScript heavy, so having been working on it was a good exercise. It features dynamic components and unique sounds for each button, a pause/resume and a reset functionality, a visual counter that stops counting when the track recording is paused, and many more.
 
+## Instructions 
+To play with your device's keyboard you want to use the following keys: w, a, s, d, z, x and b, n, m. Alternatively, you can mouse-click on any button. On a mobile device, you can simply tap.
+
 Enjoy, and feel free to contribute to this project guys!
